@@ -68,6 +68,30 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "firebase",
+      "rootUri": "file:///C:/Users/annat/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase-7.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
+      "name": "firebase_analytics",
+      "rootUri": "file:///C:/Users/annat/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_analytics-5.0.16",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "firebase_analytics_platform_interface",
+      "rootUri": "file:///C:/Users/annat/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_analytics_platform_interface-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "firebase_analytics_web",
+      "rootUri": "file:///C:/Users/annat/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_analytics_web-0.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
       "name": "firebase_core",
       "rootUri": "file:///C:/Users/annat/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_core-0.7.0",
       "packageUri": "lib/",
@@ -104,6 +128,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "http",
+      "rootUri": "file:///C:/Users/annat/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/http-0.12.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.4"
+    },
+    {
       "name": "http_parser",
       "rootUri": "file:///C:/Users/annat/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/http_parser-3.1.4",
       "packageUri": "lib/",
@@ -132,6 +162,12 @@
       "rootUri": "file:///C:/Users/annat/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/path-1.8.0-nullsafety.1",
       "packageUri": "lib/",
       "languageVersion": "2.10"
+    },
+    {
+      "name": "pedantic",
+      "rootUri": "file:///C:/Users/annat/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/pedantic-1.9.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "plugin_platform_interface",
@@ -206,7 +242,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-02-07T07:42:13.986116Z",
+  "generated": "2021-02-07T17:58:11.869271Z",
   "generator": "pub",
   "generatorVersion": "2.10.5"
 }

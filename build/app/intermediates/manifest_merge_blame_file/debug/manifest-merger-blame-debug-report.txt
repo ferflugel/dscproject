@@ -14,11 +14,15 @@
 14    <uses-permission android:name="android.permission.INTERNET" />
 14-->W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\android\app\src\debug\AndroidManifest.xml:6:5-66
 14-->W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\android\app\src\debug\AndroidManifest.xml:6:22-64
-15    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-16    <!-- <uses-sdk android:minSdkVersion="14" /> -->
-17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\8e1685af7e3fe64b6bbce181fd3790cf\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:5-79
-17-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\8e1685af7e3fe64b6bbce181fd3790cf\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:22-76
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[:firebase_analytics] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
+15-->[:firebase_analytics] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-76
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->[:firebase_analytics] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-68
+16-->[:firebase_analytics] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-65
+17    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+17-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:26:5-110
+17-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:26:22-107
 18    <!--
 19 io.flutter.app.FlutterApplication is an android.app.Application that
 20         calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -31,7 +35,7 @@
 26        android:name="io.flutter.app.FlutterApplication"
 26-->W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\android\app\src\main\AndroidManifest.xml:9:9-57
 27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-27-->[androidx.core:core:1.1.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:18-86
+27-->[androidx.core:core:1.1.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\3e26ef26d15f163a2f1a31a2130a0254\core-1.1.0\AndroidManifest.xml:24:18-86
 28        android:debuggable="true"
 29        android:icon="@mipmap/ic_launcher"
 29-->W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\android\app\src\main\AndroidManifest.xml:11:9-43
@@ -101,59 +105,118 @@
 71-->W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\android\app\src\main\AndroidManifest.xml:45:13-30
 72
 73        <service
-73-->[:cloud_firestore] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+73-->[:firebase_analytics] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-16:19
 74            android:name="com.google.firebase.components.ComponentDiscoveryService"
-74-->[:cloud_firestore] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
+74-->[:firebase_analytics] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:12:18-89
 75            android:directBootAware="true"
-75-->[com.google.firebase:firebase-common:19.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\bf972967d8c78407f28b1e3b527e9675\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+75-->[com.google.firebase:firebase-common:19.5.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\f8fbd0b61cea25d443af4b663d97d7e4\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
 76            android:exported="false" >
-76-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\8e1685af7e3fe64b6bbce181fd3790cf\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:19:13-37
+76-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\215dada248079485c69e5c61ac4423d8\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:19:13-37
 77            <meta-data
-77-->[:cloud_firestore] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-78                android:name="com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar"
-78-->[:cloud_firestore] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-133
+77-->[:firebase_analytics] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:85
+78                android:name="com.google.firebase.components:io.flutter.plugins.firebaseanalytics.FlutterFirebaseAppRegistrar"
+78-->[:firebase_analytics] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-127
 79                android:value="com.google.firebase.components.ComponentRegistrar" />
-79-->[:cloud_firestore] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+79-->[:firebase_analytics] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-82
 80            <meta-data
-80-->[:firebase_core] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-81                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar"
-81-->[:firebase_core] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-123
+80-->[:cloud_firestore] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+81                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+81-->[:cloud_firestore] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
 82                android:value="com.google.firebase.components.ComponentRegistrar" />
-82-->[:firebase_core] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+82-->[:cloud_firestore] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 83            <meta-data
-83-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\8e1685af7e3fe64b6bbce181fd3790cf\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:20:13-22:85
-84                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-84-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\8e1685af7e3fe64b6bbce181fd3790cf\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:21:17-111
+83-->[:firebase_core] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+84                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+84-->[:firebase_core] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
 85                android:value="com.google.firebase.components.ComponentRegistrar" />
-85-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\8e1685af7e3fe64b6bbce181fd3790cf\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:22:17-82
-86        </service>
-87
-88        <activity
-88-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\5ac9ad6f13ea0190a3570ea7a43d9f59\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-89            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-89-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\5ac9ad6f13ea0190a3570ea7a43d9f59\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-90            android:exported="false"
-90-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\5ac9ad6f13ea0190a3570ea7a43d9f59\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-91            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-91-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\5ac9ad6f13ea0190a3570ea7a43d9f59\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-92
-93        <provider
-93-->[com.google.firebase:firebase-common:19.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\bf972967d8c78407f28b1e3b527e9675\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
-94            android:name="com.google.firebase.provider.FirebaseInitProvider"
-94-->[com.google.firebase:firebase-common:19.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\bf972967d8c78407f28b1e3b527e9675\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
-95            android:authorities="com.example.dscproject.firebaseinitprovider"
-95-->[com.google.firebase:firebase-common:19.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\bf972967d8c78407f28b1e3b527e9675\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
-96            android:exported="false"
-96-->[com.google.firebase:firebase-common:19.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\bf972967d8c78407f28b1e3b527e9675\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
-97            android:initOrder="100" />
-97-->[com.google.firebase:firebase-common:19.3.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\bf972967d8c78407f28b1e3b527e9675\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
-98
-99        <meta-data
-99-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\c10b6fd0d7d4b412d7b96f84dd0ffa54\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-100            android:name="com.google.android.gms.version"
-100-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\c10b6fd0d7d4b412d7b96f84dd0ffa54\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-101            android:value="@integer/google_play_services_version" />
-101-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\c10b6fd0d7d4b412d7b96f84dd0ffa54\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-102    </application>
+85-->[:firebase_core] W:\U of T Organizer\Year 4 Courses\DSCG\DSCG Application\dscproject\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+86            <meta-data
+86-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\215dada248079485c69e5c61ac4423d8\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:20:13-22:85
+87                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+87-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\215dada248079485c69e5c61ac4423d8\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:21:17-111
+88                android:value="com.google.firebase.components.ComponentRegistrar" />
+88-->[com.google.firebase:firebase-firestore:22.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\215dada248079485c69e5c61ac4423d8\jetified-firebase-firestore-22.0.2\AndroidManifest.xml:22:17-82
+89            <meta-data
+89-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\2a1d642a571731beebc925a7dbea79fd\play-services-measurement-api-18.0.2\AndroidManifest.xml:30:13-32:85
+90                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+90-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\2a1d642a571731beebc925a7dbea79fd\play-services-measurement-api-18.0.2\AndroidManifest.xml:31:17-139
+91                android:value="com.google.firebase.components.ComponentRegistrar" />
+91-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\2a1d642a571731beebc925a7dbea79fd\play-services-measurement-api-18.0.2\AndroidManifest.xml:32:17-82
+92            <meta-data
+92-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\e621b86a65d937145bd19c8efcb92faf\firebase-installations-16.3.5\AndroidManifest.xml:18:13-20:85
+93                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+93-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\e621b86a65d937145bd19c8efcb92faf\firebase-installations-16.3.5\AndroidManifest.xml:19:17-127
+94                android:value="com.google.firebase.components.ComponentRegistrar" />
+94-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\e621b86a65d937145bd19c8efcb92faf\firebase-installations-16.3.5\AndroidManifest.xml:20:17-82
+95            <!--
+96                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+97                clients to use it as well, by defining this registrar in their own core/common library.
+98            -->
+99            <meta-data
+99-->[com.google.firebase:firebase-common:19.5.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\f8fbd0b61cea25d443af4b663d97d7e4\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+100                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+100-->[com.google.firebase:firebase-common:19.5.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\f8fbd0b61cea25d443af4b663d97d7e4\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-common:19.5.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\f8fbd0b61cea25d443af4b663d97d7e4\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+102        </service>
 103
-104</manifest>
+104        <provider
+104-->[com.google.firebase:firebase-common:19.5.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\f8fbd0b61cea25d443af4b663d97d7e4\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
+105            android:name="com.google.firebase.provider.FirebaseInitProvider"
+105-->[com.google.firebase:firebase-common:19.5.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\f8fbd0b61cea25d443af4b663d97d7e4\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
+106            android:authorities="com.example.dscproject.firebaseinitprovider"
+106-->[com.google.firebase:firebase-common:19.5.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\f8fbd0b61cea25d443af4b663d97d7e4\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
+107            android:directBootAware="true"
+107-->[com.google.firebase:firebase-common:19.5.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\f8fbd0b61cea25d443af4b663d97d7e4\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
+108            android:exported="false"
+108-->[com.google.firebase:firebase-common:19.5.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\f8fbd0b61cea25d443af4b663d97d7e4\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
+109            android:initOrder="100" />
+109-->[com.google.firebase:firebase-common:19.5.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\f8fbd0b61cea25d443af4b663d97d7e4\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
+110
+111        <receiver
+111-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:29:9-33:20
+112            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+112-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:30:13-85
+113            android:enabled="true"
+113-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:31:13-35
+114            android:exported="false" >
+114-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:32:13-37
+115        </receiver>
+116
+117        <service
+117-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:35:9-38:40
+118            android:name="com.google.android.gms.measurement.AppMeasurementService"
+118-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:36:13-84
+119            android:enabled="true"
+119-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:37:13-35
+120            android:exported="false" />
+120-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:38:13-37
+121        <service
+121-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:39:9-43:72
+122            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+122-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:40:13-87
+123            android:enabled="true"
+123-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:41:13-35
+124            android:exported="false"
+124-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:42:13-37
+125            android:permission="android.permission.BIND_JOB_SERVICE" />
+125-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\de52512b94d8db966fc9fbb4f20eae88\play-services-measurement-18.0.2\AndroidManifest.xml:43:13-69
+126
+127        <activity
+127-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\30a8c856d8fe9a20d62f614b9db1a8ff\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+128            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+128-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\30a8c856d8fe9a20d62f614b9db1a8ff\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+129            android:exported="false"
+129-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\30a8c856d8fe9a20d62f614b9db1a8ff\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+130            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+130-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\30a8c856d8fe9a20d62f614b9db1a8ff\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+131
+132        <meta-data
+132-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\4d94f2f31b472b0bcd04dcb87f990764\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+133            android:name="com.google.android.gms.version"
+133-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\4d94f2f31b472b0bcd04dcb87f990764\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+134            android:value="@integer/google_play_services_version" />
+134-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\annat\.gradle\caches\transforms-2\files-2.1\4d94f2f31b472b0bcd04dcb87f990764\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+135    </application>
+136
+137</manifest>
