@@ -1,0 +1,4 @@
+#Sat Feb 06 13:41:47 EST 2021
+base.0=W\:\\U of T Organizer\\Year 4 Courses\\DSCG\\DSCG Application\\dscproject\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
