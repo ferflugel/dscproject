@@ -1,86 +1,73 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+// This code was not produced by me, it is from a model app
+
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
 
 void main() => runApp(MyApp());
 
+// #docregion MyApp
 class MyApp extends StatelessWidget {
- @override
- Widget build(BuildContext context) {
-   return MaterialApp(
-     title: 'Baby Names',
-     home: MyHomePage(),
-   );
- }
+  // #docregion build
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Hey Guys',
+      home: RandomWords(),
+    );
+  }
+  // #enddocregion build
 }
+// #enddocregion MyApp
 
-class MyHomePage extends StatefulWidget {
- @override
- _MyHomePageState createState() {
-   return _MyHomePageState();
- }
+// #docregion RWS-var
+class RandomWordsState extends State<RandomWords> {
+  final _suggestions = <WordPair>[];
+  final _biggerFont = const TextStyle(fontSize: 18.0);
+  // #enddocregion RWS-var
+
+  // #docregion _buildSuggestions
+  Widget _buildSuggestions() {
+    return ListView.builder(
+        padding: const EdgeInsets.all(16.0),
+        itemBuilder: /*1*/ (context, i) {
+          if (i.isOdd) return Divider(); /*2*/
+
+          final index = i ~/ 2; /*3*/
+          if (index >= _suggestions.length) {
+            _suggestions.addAll(generateWordPairs().take(10)); /*4*/
+          }
+          return _buildRow(_suggestions[index]);
+        });
+  }
+  // #enddocregion _buildSuggestions
+
+  // #docregion _buildRow
+  Widget _buildRow(WordPair pair) {
+    return ListTile(
+      title: Text(
+        pair.asPascalCase,
+        style: _biggerFont,
+      ),
+    );
+  }
+  // #enddocregion _buildRow
+
+  // #docregion RWS-build
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Hey Guys'),
+      ),
+      body: _buildSuggestions(),
+    );
+  }
+  // #enddocregion RWS-build
+  // #docregion RWS-var
 }
+// #enddocregion RWS-var
 
-class _MyHomePageState extends State<MyHomePage> {
- @override
- Widget build(BuildContext context) {
-   return Scaffold(
-     appBar: AppBar(title: Text('Baby Name Votes')),
-     body: _buildBody(context),
-   );
- }
-
- Widget _buildBody(BuildContext context) {
-   return StreamBuilder<QuerySnapshot>(
-     stream: FirebaseFirestore.instance.collection('baby').snapshots(),
-     builder: (context, snapshot) {
-       if (!snapshot.hasData) return LinearProgressIndicator();
-
-       return _buildList(context, snapshot.data.docs);
-     },
-   );
- }
-
- Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
-   return ListView(
-     padding: const EdgeInsets.only(top: 20.0),
-     children: snapshot.map((data) => _buildListItem(context, data)).toList(),
-   );
- }
-
- Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
-   final record = Record.fromSnapshot(data);
-
-   return Padding(
-     key: ValueKey(record.name),
-     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-     child: Container(
-       decoration: BoxDecoration(
-         border: Border.all(color: Colors.grey),
-         borderRadius: BorderRadius.circular(5.0),
-       ),
-       child: ListTile(
-         title: Text(record.name),
-         trailing: Text(record.votes.toString()),
-         onTap: () => record.reference.update({'votes': FieldValue.increment(1)}),       ),
-     ),
-   );
- }
-}
-
-class Record {
- final String name;
- final int votes;
- final DocumentReference reference;
-
- Record.fromMap(Map<String, dynamic> map, {this.reference})
-     : assert(map['name'] != null),
-       assert(map['votes'] != null),
-       name = map['name'],
-       votes = map['votes'];
-
- Record.fromSnapshot(DocumentSnapshot snapshot)
-     : this.fromMap(snapshot.data(), reference: snapshot.reference);
-
- @override
- String toString() => "Record<$name:$votes>";
+class RandomWords extends StatefulWidget {
+  @override
+  RandomWordsState createState() => new RandomWordsState();
 }
