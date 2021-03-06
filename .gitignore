@@ -39,3 +39,35 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+.dart_tool/flutter_build/5390c02b68a48ae19673fd2a89d0cc98/.filecache
+.dart_tool/flutter_build/5390c02b68a48ae19673fd2a89d0cc98/app.dill
+.dart_tool/flutter_build/5390c02b68a48ae19673fd2a89d0cc98/kernel_snapshot.d
+.dart_tool/flutter_build/5390c02b68a48ae19673fd2a89d0cc98/kernel_snapshot.stamp
+.dart_tool/flutter_build/5390c02b68a48ae19673fd2a89d0cc98/outputs.json
+.dart_tool/package_config.json
+.flutter-plugins-dependencies
+.packages
+android/.gradle/5.6.2/executionHistory/executionHistory.bin
+android/.gradle/5.6.2/executionHistory/executionHistory.lock
+android/.gradle/5.6.2/fileHashes/fileHashes.bin
+android/.gradle/5.6.2/fileHashes/fileHashes.lock
+android/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+build/app/intermediates/flutter/debug/.last_build_id
+build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin
+build/app/intermediates/flutter/debug/flutter_assets/NOTICES
+build/app/intermediates/flutter/debug/flutter_build.d
+build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt
+build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin
+build/app/intermediates/merged_assets/debug/out/flutter_assets/NOTICES
+build/app/outputs/apk/debug/app-debug.apk
+build/app/outputs/flutter-apk/app-debug.apk
+build/app/outputs/flutter-apk/app.apk
+build/app/outputs/flutter-apk/app.apk.sha1
+pubspec.lock
+.dart_tool/flutter_build/5390c02b68a48ae19673fd2a89d0cc98/.filecache
+.dart_tool/flutter_build/5390c02b68a48ae19673fd2a89d0cc98/app.dill
+.dart_tool/flutter_build/5390c02b68a48ae19673fd2a89d0cc98/kernel_snapshot.d
+.dart_tool/flutter_build/5390c02b68a48ae19673fd2a89d0cc98/kernel_snapshot.stamp
+.dart_tool/flutter_build/5390c02b68a48ae19673fd2a89d0cc98/outputs.json
+.dart_tool/package_config.json
+.flutter-plugins-dependencies
