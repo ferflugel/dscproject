@@ -1,73 +1,73 @@
-// This code was not produced by me, it is from a model app
-
+// Code that serves as base for Talent Funding prototype
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
 
 void main() => runApp(MyApp());
 
-// #docregion MyApp
 class MyApp extends StatelessWidget {
-  // #docregion build
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Hey Guys',
-      home: RandomWords(),
+      title: 'Prototype',
+      home: Prototype(),
     );
   }
-  // #enddocregion build
 }
-// #enddocregion MyApp
 
-// #docregion RWS-var
-class RandomWordsState extends State<RandomWords> {
-  final _suggestions = <WordPair>[];
-  final _biggerFont = const TextStyle(fontSize: 18.0);
-  // #enddocregion RWS-var
+class PrototypeState extends State<Prototype> {
+  int _selectedPage = 1;
+  List _pageOptions = [
+    Text('Forum', style: TextStyle(fontSize: 20)),
+    HomePage(),
+    Text('Profile', style: TextStyle(fontSize: 20))
+  ];
 
-  // #docregion _buildSuggestions
-  Widget _buildSuggestions() {
-    return ListView.builder(
-        padding: const EdgeInsets.all(16.0),
-        itemBuilder: /*1*/ (context, i) {
-          if (i.isOdd) return Divider(); /*2*/
-
-          final index = i ~/ 2; /*3*/
-          if (index >= _suggestions.length) {
-            _suggestions.addAll(generateWordPairs().take(10)); /*4*/
-          }
-          return _buildRow(_suggestions[index]);
-        });
-  }
-  // #enddocregion _buildSuggestions
-
-  // #docregion _buildRow
-  Widget _buildRow(WordPair pair) {
-    return ListTile(
-      title: Text(
-        pair.asPascalCase,
-        style: _biggerFont,
-      ),
-    );
-  }
-  // #enddocregion _buildRow
-
-  // #docregion RWS-build
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hey Guys'),
+        title: Text('Talent Funding'),
       ),
-      body: _buildSuggestions(),
+      body: Center(
+        child: _pageOptions[_selectedPage],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedPage,
+        onTap: (int index) {
+          setState(() {
+            _selectedPage = index;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people),
+            label: "Forum",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "Profile",
+          )
+        ],
+      ),
     );
   }
-  // #enddocregion RWS-build
-  // #docregion RWS-var
-}
-// #enddocregion RWS-var
 
-class RandomWords extends StatefulWidget {
+}
+
+// This is the class that will define the HomePage 
+class HomePage extends StatelessWidget
+{
+  @override 
+  Widget build(BuildContext context)
+  {
+    return Text('Homepage', style: TextStyle(fontSize: 20));
+  }
+}
+
+class Prototype extends StatefulWidget {
   @override
-  RandomWordsState createState() => new RandomWordsState();
+  PrototypeState createState() => PrototypeState();
 }
