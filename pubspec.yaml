@@ -1,5 +1,5 @@
 name: dscproject
-description: A new Flutter project.
+description: A Flutter project created for the Google Solution Challenge 2021.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -18,14 +18,18 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  cloud_firestore: ^0.16.0
-  firebase_core: ^0.7.0
-  firebase_analytics: ^5.0.2
+  cloud_firestore: ^1.0.0
+  firebase_core: ^1.0.0
+  firebase_analytics: ^5.0.6
+  firebase_auth: ^1.0.0
+  google_sign_in: ^5.0.0
+  http: ^0.13.0
+  convert: ^3.0.0
 
 
   # The following adds the Cupertino Icons font to your application.

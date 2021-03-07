@@ -4,24 +4,7 @@
             "outputFile": "W:\\U of T Organizer\\Year 4 Courses\\DSCG\\DSCG Application\\dscproject\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-th\\values-th.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\annat\\.gradle\\caches\\transforms-2\\files-2.1\\30a8c856d8fe9a20d62f614b9db1a8ff\\play-services-base-17.0.0\\res\\values-th\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,349,528,649,754,949,1071,1216,1349,1552,1655,1833,1953,2152,2329,2419,2513",
-                        "endColumns": "103,178,120,104,194,121,144,132,202,102,177,119,198,176,89,93,108",
-                        "endOffsets": "348,527,648,753,948,1070,1215,1348,1551,1654,1832,1952,2151,2328,2418,2512,2621"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,213,392,517,626,821,947,1096,1421,1624,1731,1909,2033,2232,2413,2507,2605",
-                        "endColumns": "107,178,124,108,194,125,148,136,202,106,177,123,198,180,93,97,112",
-                        "endOffsets": "208,387,512,621,816,942,1091,1228,1619,1726,1904,2028,2227,2408,2502,2600,2713"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\annat\\.gradle\\caches\\transforms-2\\files-2.1\\4d94f2f31b472b0bcd04dcb87f990764\\jetified-play-services-basement-17.0.0\\res\\values-th\\values.xml",
+                    "source": "C:\\Users\\annat\\.gradle\\caches\\transforms-2\\files-2.1\\25a35dba8274fd6881900c7b70b38330\\jetified-play-services-basement-17.1.0\\res\\values-th\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -35,6 +18,23 @@
                         "startOffsets": "1233",
                         "endColumns": "187",
                         "endOffsets": "1416"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\annat\\.gradle\\caches\\transforms-2\\files-2.1\\97461efba6c5e9e0983cc52e8129f2d5\\play-services-base-17.1.0\\res\\values-th\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,349,528,649,754,949,1071,1216,1349,1552,1655,1833,1953,2152,2329,2419,2513",
+                        "endColumns": "103,178,120,104,194,121,144,132,202,102,177,119,198,176,89,93,108",
+                        "endOffsets": "348,527,648,753,948,1070,1215,1348,1551,1654,1832,1952,2151,2328,2418,2512,2621"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,213,392,517,626,821,947,1096,1421,1624,1731,1909,2033,2232,2413,2507,2605",
+                        "endColumns": "107,178,124,108,194,125,148,136,202,106,177,123,198,180,93,97,112",
+                        "endOffsets": "208,387,512,621,816,942,1091,1228,1619,1726,1904,2028,2227,2408,2502,2600,2713"
                     }
                 },
                 {

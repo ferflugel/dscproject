@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>CLIENT_ID</key>
+		<string>464893293405-55c3gvis2jrcqbnnr96nscbq6hsgl3hv.apps.googleusercontent.com</string>
+		<key>REVERSED_CLIENT_ID</key>
+		<string>com.googleusercontent.apps.464893293405-55c3gvis2jrcqbnnr96nscbq6hsgl3hv</string>
+		<key>ANDROID_CLIENT_ID</key>
+		<string>464893293405-1mr9of4oa98r24ev4c484307k0qhkn6t.apps.googleusercontent.com</string>
+		<key>API_KEY</key>
+		<string>AIzaSyDgxMZCR-TQ9Nzn6vFTIMEoDgCGvcxmQ6A</string>
+		<key>GCM_SENDER_ID</key>
+		<string>464893293405</string>
+		<key>PLIST_VERSION</key>
+		<string>1</string>
+		<key>BUNDLE_ID</key>
+		<string>com.solution</string>
+		<key>PROJECT_ID</key>
+		<string>solution-challenge-a1c51</string>
+		<key>STORAGE_BUCKET</key>
+		<string>solution-challenge-a1c51.appspot.com</string>
+		<key>IS_ADS_ENABLED</key>
+		<false></false>
+		<key>IS_ANALYTICS_ENABLED</key>
+		<false></false>
+		<key>IS_APPINVITE_ENABLED</key>
+		<true></true>
+		<key>IS_GCM_ENABLED</key>
+		<true></true>
+		<key>IS_SIGNIN_ENABLED</key>
+		<true></true>
+		<key>GOOGLE_APP_ID</key>
+		<string>1:464893293405:ios:5d22f498e49b000227eeb4</string>
+		<key>DATABASE_URL</key>
+		<string>https://solution-challenge-a1c51-default-rtdb.firebaseio.com</string>
+		<!-- Put me in the [my_project]/ios/Runner/Info.plist file -->
+		<!-- Google Sign-in Section -->
+		<key>CFBundleURLTypes</key>
+		<array>
+			<dict>
+				<key>CFBundleTypeRole</key>
+				<string>Editor</string>
+				<key>CFBundleURLSchemes</key>
+				<array>
+					<!-- TODO Replace this value: -->
+					<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+					<string>com.googleusercontent.apps.861823949799-vc35cprkp249096uujjn0vvnmcvjppkn</string>
+				</array>
+			</dict>
+		</array>
+		<!-- End of the Google Sign-in Section -->
+
+
+	</dict>
+</plist>

@@ -1,34 +1,58 @@
 {
   "project_info": {
-    "project_number": "396248586522",
-    "project_id": "solution-h",
-    "storage_bucket": "solution-h.appspot.com"
+    "project_number": "464893293405",
+    "firebase_url": "https://solution-challenge-a1c51-default-rtdb.firebaseio.com",
+    "project_id": "solution-challenge-a1c51",
+    "storage_bucket": "solution-challenge-a1c51.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:396248586522:android:ba0b8bcd8d1bd872c674a3",
+        "mobilesdk_app_id": "1:464893293405:android:2a317ee73fd171dd27eeb4",
         "android_client_info": {
-          "package_name": "com.example.dscproject"
+          "package_name": "solution.challenge.team"
         }
       },
       "oauth_client": [
         {
-          "client_id": "396248586522-hcmofcj04fqhaujc038h3kpgsmfu5399.apps.googleusercontent.com",
+          "client_id": "464893293405-1mr9of4oa98r24ev4c484307k0qhkn6t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "solution.challenge.team",
+            "certificate_hash": "a2c5027788df674a403383b8d463c50c20403e92"
+          }
+        },
+        {
+          "client_id": "464893293405-rou9qslnlag49p8i1ddmsmvnfus5jj82.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "solution.challenge.team",
+            "certificate_hash": "60b2aef64bda3c577835df9ecfb8f418077a5696"
+          }
+        },
+        {
+          "client_id": "464893293405-rb5cc1devgk57a9lkvq6tmh30pf2s9em.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBWMzJjAU4hJ9lfJoWI52PXY9wZbPuyo34"
+          "current_key": "AIzaSyCO2v02an0nQg4ARdeYRkrrcpNEj9uRoGY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "396248586522-hcmofcj04fqhaujc038h3kpgsmfu5399.apps.googleusercontent.com",
+              "client_id": "464893293405-rb5cc1devgk57a9lkvq6tmh30pf2s9em.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "464893293405-55c3gvis2jrcqbnnr96nscbq6hsgl3hv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solution"
+              }
             }
           ]
         }
