@@ -5,7 +5,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'Homepage.dart';
-import 'Profilepage.dart'; // will use this later when we figue thie out. 
+import 'Profilepage.dart'; // will use this later when we figue thie out.
 import 'Forumpage.dart';
 import 'Settingpage.dart';
 import 'package:flutter/material.dart';
@@ -40,32 +40,29 @@ class Prototype extends StatefulWidget {
 }
 
 class PrototypeState extends State<Prototype> {
-  
   GoogleSignInAccount? _currentUser;
   String _contactText = '';
   int _selectedPage = 1;
+  List _pageOptions = [];
 
-  
   @override
   void initState() {
     super.initState();
     _googleSignIn.onCurrentUserChanged.listen((GoogleSignInAccount? account) {
       setState(() {
         _currentUser = account;
+        _pageOptions = [
+          ProfilePage(_currentUser, _googleSignIn),
+          HomePage(_currentUser),
+          ForumPage(_currentUser),
+          SettingPage(_currentUser)
+        ];
       });
       if (_currentUser != null) {
         _handleGetContact(_currentUser!);
       }
     });
     _googleSignIn.signInSilently();
-    List _pageOptions = [
-    ProfilePage(_currentUser, _googleSignIn),
-    HomePage(_currentUser),
-    ForumPage(_currentUser),
-    SettingPage(_currentUser)
-  ];
-
-
   }
 
   Future<void> _handleGetContact(GoogleSignInAccount user) async {
@@ -127,28 +124,45 @@ class PrototypeState extends State<Prototype> {
   Widget _buildBody() {
     GoogleSignInAccount? user = _currentUser;
     if (user != null) {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          ListTile(
-            leading: GoogleUserCircleAvatar(
-              identity: user,
+      return 
+          Scaffold(
+            body: Center(
+              child: _pageOptions[_selectedPage],
             ),
-            title: Text(user.displayName ?? ''),
-            subtitle: Text(user.email),
-          ),
-          const Text("Signed in successfully."),
-          //Text(_contactText),
-          ElevatedButton(
-            child: const Text('SIGN OUT'),
-            onPressed: _handleSignOut,
-          ),
-          // ElevatedButton(
-          //   child: const Text('REFRESH'),
-          //   onPressed: () => _handleGetContact(user),
-          // ),
-        ],
-      );
+            bottomNavigationBar: BottomNavigationBar(
+              currentIndex: _selectedPage,
+              onTap: (int index) {
+                setState(() {
+                  _selectedPage = index;
+                });
+              },
+              items: [
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.people, color: Colors.teal),
+                  label: "Forum",
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home, color: Colors.teal),
+                  label: "Home",
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person, color: Colors.teal),
+                  label: "Profile",
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.settings_applications, color: Colors.teal),
+                  label: "Settings",
+                ),
+              ],
+            ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () => _handleSignOut(),
+              child: Icon(Icons.logout, color: Colors.yellow),
+            ),
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.miniEndTop,
+          );
+
     } else {
       return Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -166,15 +180,13 @@ class PrototypeState extends State<Prototype> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Talent Funding'),
-        backgroundColor: Colors.teal,
-      ),
-      body: ConstrainedBox(
+        appBar: AppBar(
+          title: const Text('Talent Funding'),
+          backgroundColor: Colors.teal,
+        ),
+        body: ConstrainedBox(
           constraints: const BoxConstraints.expand(),
           child: _buildBody(),
-      )
-    );
+        ));
   }
-
 }

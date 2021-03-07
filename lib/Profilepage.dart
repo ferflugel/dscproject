@@ -4,7 +4,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 // This is the class that will define the Profile Page
 class ProfilePage extends StatefulWidget {
   final GoogleSignInAccount? user;
-  final GoogleSignIn _googleSignIn;
+  final GoogleSignIn? _googleSignIn;
 
   ProfilePage(this.user, this._googleSignIn);
 
@@ -17,16 +17,46 @@ class ProfilePageState extends State<ProfilePage> {
   GoogleSignInAccount? user;
   GoogleSignIn? _googleSignIn;
 
-  ProfilePageState(GoogleSignInAccount? user, GoogleSignIn _googleSignIn) {
+  ProfilePageState(GoogleSignInAccount? user, GoogleSignIn? _googleSignIn) {
     this.user = user;
     this._googleSignIn = _googleSignIn;
   }
 
   @override
   Widget build(BuildContext context) {
+    GoogleSignInAccount? user = this.user;
     // This is where you change the view of the page
-    return Text(
-        'Personal Profile, shows the projects that this user is engaged in',
-        style: TextStyle(fontSize: 20));
+
+    if (user != null) {
+       return Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          ListTile(
+            leading: GoogleUserCircleAvatar(
+              identity: user,
+            ),
+            title: Text(user.displayName ?? ''),
+            subtitle: Text(user.email),
+          ),
+          const Text("Signed in successfully."),
+          const Text('Personal Profile, shows the projects that this user is engaged in',
+        style: TextStyle(fontSize: 20)),
+          //Text(_contactText),
+          // ElevatedButton(
+          //   child: const Text('REFRESH'),
+          //   onPressed: () => _handleGetContact(user),
+          // ),
+        ],
+      );
+    }else {
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          const Text("Please sign in to use our app!"),
+        ],
+      );
+    }
+   
+    
   }
 }
