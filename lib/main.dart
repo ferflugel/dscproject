@@ -2,8 +2,10 @@
 // code with reference to https://github.com/flutter/plugins/blob/master/packages/google_sign_in/google_sign_in/example/lib/main.dart
 
 // Page imports from the other files. They are just different classes!
+import 'package:firebase_auth/firebase_auth.dart';
+
 import 'Homepage.dart';
-import 'Profilepage.dart';
+import 'Profilepage.dart'; // will use this later when we figue thie out. 
 import 'Forumpage.dart';
 import 'Settingpage.dart';
 import 'package:flutter/material.dart';
@@ -38,16 +40,10 @@ class Prototype extends StatefulWidget {
 }
 
 class PrototypeState extends State<Prototype> {
-  int _selectedPage = 1;
-  List _pageOptions = [
-    ProfilePage(),
-    HomePage(),
-    ForumPage(),
-    SettingPage()
-  ];
-
+  
   GoogleSignInAccount? _currentUser;
   String _contactText = '';
+  int _selectedPage = 1;
 
   
   @override
@@ -62,6 +58,14 @@ class PrototypeState extends State<Prototype> {
       }
     });
     _googleSignIn.signInSilently();
+    List _pageOptions = [
+    ProfilePage(_currentUser, _googleSignIn),
+    HomePage(_currentUser),
+    ForumPage(_currentUser),
+    SettingPage(_currentUser)
+  ];
+
+
   }
 
   Future<void> _handleGetContact(GoogleSignInAccount user) async {
@@ -134,15 +138,15 @@ class PrototypeState extends State<Prototype> {
             subtitle: Text(user.email),
           ),
           const Text("Signed in successfully."),
-          Text(_contactText),
+          //Text(_contactText),
           ElevatedButton(
             child: const Text('SIGN OUT'),
             onPressed: _handleSignOut,
           ),
-          ElevatedButton(
-            child: const Text('REFRESH'),
-            onPressed: () => _handleGetContact(user),
-          ),
+          // ElevatedButton(
+          //   child: const Text('REFRESH'),
+          //   onPressed: () => _handleGetContact(user),
+          // ),
         ],
       );
     } else {
