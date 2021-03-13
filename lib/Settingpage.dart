@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-// This is the class that will define the HomePage
+// This is the class that will define the Resource Page, Ashely is gonna work on it
 class SettingPage extends StatefulWidget {
   final GoogleSignInAccount? user;
 

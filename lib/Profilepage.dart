@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-// This is the class that will define the Profile Page
+// This is the class that will define the Profile Page, Fernando
+
 class ProfilePage extends StatefulWidget {
   final GoogleSignInAccount? user;
   final GoogleSignIn? _googleSignIn;
@@ -47,7 +48,9 @@ class ProfilePageState extends State<ProfilePage> {
           //   onPressed: () => _handleGetContact(user),
           // ),
         ],
-      );
+        //TODO: Insert Profile class here
+      ); 
+
     }else {
       return Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -98,7 +101,7 @@ class Profile extends StatelessWidget {
         child: Column(children: [
           Text('About me', style: TextStyle(fontSize: 20)),
           Text('', style: TextStyle(fontSize: 20)),
-          Text('Any text describing the person will go here',
+          Text('Any text describing the person will go here, Anna would replae this variable with data from the datadatabase',
               style: TextStyle(fontSize: 10)),
         ]),
         decoration: BoxDecoration(
