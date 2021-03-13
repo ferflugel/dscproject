@@ -27,7 +27,7 @@ class ProfilePageState extends State<ProfilePage> {
     GoogleSignInAccount? user = this.user;
     // This is where you change the view of the page
 
-    if (user != null) {
+    if (user != null) { //This is when you are login
        return Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
