@@ -60,3 +60,57 @@ class ProfilePageState extends State<ProfilePage> {
     
   }
 }
+
+class Profile extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Text('Profile ', style: TextStyle(fontSize: 20)),
+      Text('', style: TextStyle(fontSize: 30)),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(
+            child: Text('Pic', style: TextStyle(fontSize: 20)),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white,
+              border: Border.all(color: Colors.blue),
+            ),
+            height: 100,
+            width: 100,
+            alignment: Alignment.center,
+          ),
+          Container(
+            child: Text('Skills', style: TextStyle(fontSize: 20)),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(color: Colors.blue),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            height: 200,
+            width: 150,
+            alignment: Alignment.center,
+          ),
+        ],
+      ),
+      Container(
+        child: Column(children: [
+          Text('About me', style: TextStyle(fontSize: 20)),
+          Text('', style: TextStyle(fontSize: 20)),
+          Text('Any text describing the person will go here',
+              style: TextStyle(fontSize: 10)),
+        ]),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(color: Colors.blue),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        padding: EdgeInsets.all(20),
+        margin: EdgeInsets.all(20),
+        width: 300,
+        height: 400,
+      ), //NEEDS TO IMPROVE
+    ]);
+  }
+}
