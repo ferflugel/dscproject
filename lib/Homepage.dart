@@ -21,8 +21,7 @@ class HomePageState extends State<HomePage> {
   }
 
   @override
-  Widget build(BuildContext context)
-  { // Do the editing here
+  Widget build(BuildContext context){ // Do the editing here
 
   return Text('Homepage, list all the projects from the database. Please include a search function here', style: TextStyle(fontSize: 20));
   }

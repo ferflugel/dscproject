@@ -7,7 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'Homepage.dart';
 import 'Profilepage.dart'; // will use this later when we figue thie out.
 import 'Forumpage.dart';
-import 'Settingpage.dart';
+import 'Resourcespage.dart';
 import 'package:flutter/material.dart';
 
 import 'dart:async';
@@ -54,61 +54,61 @@ class PrototypeState extends State<Prototype> {
           ProfilePage(_currentUser, _googleSignIn),
           HomePage(_currentUser),
           ForumPage(_currentUser),
-          SettingPage(_currentUser)
+          ResourcesPage(_currentUser),
         ];
       });
-      if (_currentUser != null) {
-        _handleGetContact(_currentUser!);
-      }
+      // if (_currentUser != null) {
+      //   _handleGetContact(_currentUser!);
+      // }
     });
     _googleSignIn.signInSilently();
   }
 
-  Future<void> _handleGetContact(GoogleSignInAccount user) async {
-    setState(() {
-      _contactText = "Loading contact info...";
-    });
-    final http.Response response = await http.get(
-      Uri.parse('https://people.googleapis.com/v1/people/me/connections'
-          '?requestMask.includeField=person.names'),
-      headers: await user.authHeaders,
-    );
-    if (response.statusCode != 200) {
-      setState(() {
-        _contactText = "People API gave a ${response.statusCode} "
-            "response. Check logs for details.";
-      });
-      print('People API ${response.statusCode} response: ${response.body}');
-      return;
-    }
-    final Map<String, dynamic> data = json.decode(response.body);
-    final String? namedContact = _pickFirstNamedContact(data);
-    setState(() {
-      if (namedContact != null) {
-        _contactText = "I see you know $namedContact!";
-      } else {
-        _contactText = "No contacts to display.";
-      }
-    });
-  }
+  // Future<void> _handleGetContact(GoogleSignInAccount user) async {
+  //   setState(() {
+  //     _contactText = "Loading contact info...";
+  //   });
+  //   final http.Response response = await http.get(
+  //     Uri.parse('https://people.googleapis.com/v1/people/me/connections'
+  //         '?requestMask.includeField=person.names'),
+  //     headers: await user.authHeaders,
+  //   );
+  //   if (response.statusCode != 200) {
+  //     setState(() {
+  //       _contactText = "People API gave a ${response.statusCode} "
+  //           "response. Check logs for details.";
+  //     });
+  //     print('People API ${response.statusCode} response: ${response.body}');
+  //     return;
+  //   }
+  //   final Map<String, dynamic> data = json.decode(response.body);
+  //   final String? namedContact = _pickFirstNamedContact(data);
+  //   setState(() {
+  //     if (namedContact != null) {
+  //       _contactText = "I see you know $namedContact!";
+  //     } else {
+  //       _contactText = "No contacts to display.";
+  //     }
+  //   });
+  // }
 
-  String? _pickFirstNamedContact(Map<String, dynamic> data) {
-    final List<dynamic>? connections = data['connections'];
-    final Map<String, dynamic>? contact = connections?.firstWhere(
-      (dynamic contact) => contact['names'] != null,
-      orElse: () => null,
-    );
-    if (contact != null) {
-      final Map<String, dynamic>? name = contact['names'].firstWhere(
-        (dynamic name) => name['displayName'] != null,
-        orElse: () => null,
-      );
-      if (name != null) {
-        return name['displayName'];
-      }
-    }
-    return null;
-  }
+  // String? _pickFirstNamedContact(Map<String, dynamic> data) {
+  //   final List<dynamic>? connections = data['connections'];
+  //   final Map<String, dynamic>? contact = connections?.firstWhere(
+  //     (dynamic contact) => contact['names'] != null,
+  //     orElse: () => null,
+  //   );
+  //   if (contact != null) {
+  //     final Map<String, dynamic>? name = contact['names'].firstWhere(
+  //       (dynamic name) => name['displayName'] != null,
+  //       orElse: () => null,
+  //     );
+  //     if (name != null) {
+  //       return name['displayName'];
+  //     }
+  //   }
+  //   return null;
+  // }
 
   Future<void> _handleSignIn() async {
     try {
@@ -149,8 +149,8 @@ class PrototypeState extends State<Prototype> {
                   label: "Profile",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.settings_applications, color: Colors.teal),
-                  label: "Settings",
+                  icon: Icon(Icons.read_more, color: Colors.teal),
+                  label: "Resources",
                 ),
               ],
             ),

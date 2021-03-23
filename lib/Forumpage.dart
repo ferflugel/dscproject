@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-// This is the class that will define the HomePage, Ashley
+// This is the class that will define the Forum, Ashley
 
 class ForumPage extends StatefulWidget {
   final GoogleSignInAccount? user;
