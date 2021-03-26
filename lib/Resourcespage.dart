@@ -11,7 +11,7 @@ class ResourcesPage extends StatefulWidget {
   ResourcesPageState createState() => new ResourcesPageState(user);
 }
 
-//This is where you write the actul function
+
 class ResourcesPageState extends State<ResourcesPage> {
   GoogleSignInAccount? user;
 
@@ -19,11 +19,55 @@ class ResourcesPageState extends State<ResourcesPage> {
     this.user = user;
   }
 
+  final ScrollController _scrollController = ScrollController();
+
+  void _scrollToSelectedContent(bool isExpanded, double previousOffset, int index, GlobalKey myKey) {
+    final keyContext = myKey.currentContext;
+
+    if (keyContext != null) {
+      // make sure that your widget is visible
+      final box = keyContext.findRenderObject() as RenderBox;
+      _scrollController.animateTo(isExpanded ? (box.size.height * index) : previousOffset,
+          duration: Duration(milliseconds: 500), curve: Curves.linear);
+    }
+  }
+
+  List<Widget> _buildExpansionTileChildren() => [
+        FlutterLogo(
+          size: 50.0,
+        ),
+        Text(
+          'test',
+          textAlign: TextAlign.justify,
+        ),
+      ];
+
+  ExpansionTile _buildExpansionTile(int index) {
+    final GlobalKey expansionTileKey = GlobalKey();
+    double previousOffset;
+
+    return ExpansionTile(
+      key: expansionTileKey,
+      onExpansionChanged: (isExpanded) {
+        if (isExpanded) previousOffset = _scrollController.offset;
+        _scrollToSelectedContent(isExpanded, previousOffset, index, expansionTileKey);
+      },
+      title: Text('Resource $index'),
+      children: _buildExpansionTileChildren(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    // This is where you change the view of the page
-
-    return Text('Resources Page, Ashley wil add her resources here.',
-        style: TextStyle(fontSize: 20));
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Resources'),
+      ),
+      body: ListView.builder(
+        controller: _scrollController,
+        itemCount: 20,
+        itemBuilder: (BuildContext context, int index) => _buildExpansionTile(index),
+      ),
+    );
   }
 }
