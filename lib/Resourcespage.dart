@@ -66,7 +66,7 @@ class ResourcesPageState extends State<ResourcesPage> {
       ),
       body: ListView.builder(
         controller: _scrollController,
-        itemCount: 26,
+        itemCount: 26, 
         itemBuilder: (BuildContext context, int index) => _buildExpansionTile(index),
       ),
     );

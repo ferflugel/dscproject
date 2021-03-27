@@ -43,14 +43,14 @@ class HomePageState extends State<HomePage> {
                       filled: true,
                     ),
                   ),
-                  // ColoredBox(
-                  //     color: Colors.blueAccent,
-                  //     child: RawMaterialButton(
-                  //         onPressed: () {},
-                  //         child: Text('Search',
-                  //             style:
-                  //                 TextStyle(color: Colors.amber, fontSize: 18)),
-                  //         shape: RoundedRectangleBorder()))
+                  ColoredBox(
+                      color: Colors.blueAccent,
+                      child: RawMaterialButton(
+                          onPressed: () {},
+                          child: Text('Add project',
+                              style:
+                                  TextStyle(color: Colors.amber, fontSize: 18)),
+                          shape: RoundedRectangleBorder()))
                 ],
               )),
         ],
