@@ -20,17 +20,17 @@ class ForumPageState extends State<ForumPage> {
 
   var topCategoyIcons = new Container(
     alignment: Alignment.center,
-    decoration: new BoxDecoration(
-        gradient: new LinearGradient(
-      colors: [
-        Colors.deepPurple,
-        Colors.deepPurple
-      ],
-      begin: const FractionalOffset(0.0, 0.0),
-      end: const FractionalOffset(0.0, 1.0),
-      stops: [0.0, 1.0],
-      tileMode: TileMode.clamp,
-    )),
+    // decoration: new BoxDecoration(
+    //     gradient: new LinearGradient(
+    //   colors: [
+    //     Colors.deepPurple,
+    //     Colors.deepPurple
+    //   ],
+    //   begin: const FractionalOffset(0.0, 0.0),
+    //   end: const FractionalOffset(0.0, 1.0),
+    //   stops: [0.0, 1.0],
+    //   tileMode: TileMode.clamp,
+    // )),
     child: new Container(
       alignment: Alignment.bottomCenter,
       margin: const EdgeInsets.symmetric(
@@ -49,8 +49,8 @@ class ForumPageState extends State<ForumPage> {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          new CategoryIcon(Icons.school, "Tutorials", true),
-          new CategoryIcon(Icons.public, "Jobs", false),
+          new CategoryIcon(Icons.school, "Find Help", true),
+          new CategoryIcon(Icons.public, "Global scale", false),
           new CategoryIcon(Icons.speaker_notes, "Chat", false),
           new CategoryIcon(Icons.place, "Local groups", false),
         ],
@@ -105,20 +105,20 @@ class ForumPageState extends State<ForumPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        centerTitle: false,
-        elevation: 0.0,
-        //title: new Text(
-          //widget.title,
-          //textScaleFactor: 1.3,
-        //),
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.search),
-            onPressed: _onSearchPressed,
-          ),
-        ],
-      ),
+      // appBar: new AppBar(
+      //   centerTitle: false,
+      //   elevation: 0.0,
+      //   //title: new Text(
+      //     //widget.title,
+      //     //textScaleFactor: 1.3,
+      //   //),
+      //   actions: <Widget>[
+      //     new IconButton(
+      //       icon: new Icon(Icons.search),
+      //       onPressed: _onSearchPressed,
+      //     ),
+      //   ],
+      // ),
       body: new Container(
         child: new ListView(
           children: <Widget>[topCategoyIcons, categoryMetric, listView],
@@ -158,9 +158,9 @@ class CategoryIcon extends StatelessWidget {
           new IconButton(
             icon: new Icon(icon),
             onPressed: _onSearchPressed,
-            color: selected == true
-                ? Colors.deepPurple
-                : Colors.black,
+            // color: selected == true
+            //     //? Colors.deepPurple
+            //     : Colors.black,
           ),
           new Text(iconText)
         ],

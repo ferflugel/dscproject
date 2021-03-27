@@ -37,14 +37,15 @@ class ResourcesPageState extends State<ResourcesPage> {
           size: 50.0,
         ),
         Text(
-          'test',
+          'Resource item and description, link to the resources',
           textAlign: TextAlign.justify,
         ),
       ];
 
   ExpansionTile _buildExpansionTile(int index) {
     final GlobalKey expansionTileKey = GlobalKey();
-    double previousOffset;
+    double previousOffset = 0.00;
+    int display_index = index + 1;
 
     return ExpansionTile(
       key: expansionTileKey,
@@ -52,7 +53,7 @@ class ResourcesPageState extends State<ResourcesPage> {
         if (isExpanded) previousOffset = _scrollController.offset;
         _scrollToSelectedContent(isExpanded, previousOffset, index, expansionTileKey);
       },
-      title: Text('Resource $index'),
+      title: Text('Resource $display_index'),
       children: _buildExpansionTileChildren(),
     );
   }
@@ -65,7 +66,7 @@ class ResourcesPageState extends State<ResourcesPage> {
       ),
       body: ListView.builder(
         controller: _scrollController,
-        itemCount: 20,
+        itemCount: 26,
         itemBuilder: (BuildContext context, int index) => _buildExpansionTile(index),
       ),
     );

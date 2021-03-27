@@ -27,11 +27,7 @@ class HomePageState extends State<HomePage> {
     //return Text('Homepage, list all the projects from the database. Please
     // include a search function here', style: TextStyle(fontSize: 20));
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Talent Funding'),
-        backgroundColor: Colors.amber,
-      ),
-      body: Center(
+     body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -47,14 +43,14 @@ class HomePageState extends State<HomePage> {
                       filled: true,
                     ),
                   ),
-                  ColoredBox(
-                      color: Colors.blueAccent,
-                      child: RawMaterialButton(
-                          onPressed: () {},
-                          child: Text('Search',
-                              style:
-                                  TextStyle(color: Colors.amber, fontSize: 18)),
-                          shape: RoundedRectangleBorder()))
+                  // ColoredBox(
+                  //     color: Colors.blueAccent,
+                  //     child: RawMaterialButton(
+                  //         onPressed: () {},
+                  //         child: Text('Search',
+                  //             style:
+                  //                 TextStyle(color: Colors.amber, fontSize: 18)),
+                  //         shape: RoundedRectangleBorder()))
                 ],
               )),
         ],
