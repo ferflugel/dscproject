@@ -41,18 +41,18 @@ class ForumPageState extends State<ForumPage> {
         color: Colors.grey[300],
         // border: new Border.all(color: Colors.black, width: 1.0),
         borderRadius: new BorderRadius.only(
-          topLeft: new Radius.circular(30.0),
-          topRight: new Radius.circular(30.0),
+          topLeft: new Radius.circular(10.0),
+          topRight: new Radius.circular(10.0),
         ),
       ),
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          new CategoryIcon(Icons.school, "Find Help", true),
-          new CategoryIcon(Icons.public, "Global scale", false),
-          new CategoryIcon(Icons.speaker_notes, "Chat", false),
-          new CategoryIcon(Icons.place, "Local groups", false),
+          new CategoryIcon(Icons.school, "Tutorial", true),
+          new CategoryIcon(Icons.public, "Jobs", false),
+          new CategoryIcon(Icons.speaker_notes, "Advice", false),
+          new CategoryIcon(Icons.place, "Local Teams", false),
         ],
       ),
     ),
@@ -64,8 +64,8 @@ class ForumPageState extends State<ForumPage> {
     decoration: new BoxDecoration(
       gradient: new LinearGradient(
         colors: [
-          Colors.grey,
-          Colors.grey
+          Colors.grey[300],
+          Colors.grey[300]
         ],
         begin: const FractionalOffset(0.0, 0.5),
         end: const FractionalOffset(0.0, 1.0),
@@ -74,8 +74,8 @@ class ForumPageState extends State<ForumPage> {
       ),
       // border: new Border.all(color: Colors.black, width: 1.0),
       borderRadius: new BorderRadius.only(
-        bottomLeft: new Radius.circular(30.0),
-        bottomRight: new Radius.circular(30.0),
+        bottomLeft: new Radius.circular(10.0),
+        bottomRight: new Radius.circular(10.0),
       ),
     ),
     child: new Row(
@@ -85,15 +85,18 @@ class ForumPageState extends State<ForumPage> {
         new CategoryIcon(Icons.build, "Projects", false),
         new CategoryIcon(Icons.question_answer, "Questions", false),
         new CategoryIcon(Icons.calendar_today, "Events", false),
-        new CategoryIcon(Icons.person, "Profile", false),
+        new CategoryIcon(Icons.person, "Find People", false),
       ],
     ),
   );
 
   static final listItemsData = [
-    new ListEntry("Chat", "Welcome to Flutter!", "I am a new Flutter developer. Any advice?", 54, 2, true),
-    new ListEntry("Local Groups", "GDG Rochester", "Join us on June 1st for the International Flutter Hackathon!",  154, 3,false),
-    new ListEntry("Projects", "My cool app", "It took a long time, but I just released my newest app", 971, 0, false),
+    new ListEntry("  Advice", "Welcome to Flutter!", " I am a new Flutter developer. Any advice?        ", 79, 17, true),
+    new ListEntry("  Local Teams", "Toronto Neighbourhood Garden", " Join us at 123 Google St. to build a herb garden!     ",  237, 5,false),
+    new ListEntry("  Projects", "Cool App", "Just released my new app, check it out!             ", 1013, 53, false),
+    new ListEntry("  Find People", "Startup", " NewGen is a fintech startup and we're looking for mentors.       ", 267, 115, true),
+    new ListEntry("  Tutorials", "Flutter App", " Build your first Flutter app with basic UI.           ",  2506, 1732,false),
+    new ListEntry("  Jobs", "Painting Job", " I'm renovating my house and need extra hands.              ", 46, 3, false),
   ];
   var listView = new ListView.builder(
     itemBuilder: (BuildContext context, int index) =>
@@ -159,7 +162,7 @@ class CategoryIcon extends StatelessWidget {
             icon: new Icon(icon),
             onPressed: _onSearchPressed,
             // color: selected == true
-            //     //? Colors.deepPurple
+            //     //? Colors.blue
             //     : Colors.black,
           ),
           new Text(iconText)
