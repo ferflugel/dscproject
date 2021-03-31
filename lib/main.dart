@@ -137,19 +137,19 @@ class PrototypeState extends State<Prototype> {
               },
               items: [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.people, color: Colors.teal),
+                  icon: Icon(Icons.people, color: Colors.blueAccent),
                   label: "Forum",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.home, color: Colors.teal),
+                  icon: Icon(Icons.home, color: Colors.blueAccent),
                   label: "Home",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.person, color: Colors.teal),
+                  icon: Icon(Icons.person, color: Colors.blueAccent),
                   label: "Profile",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.read_more, color: Colors.teal),
+                  icon: Icon(Icons.read_more, color: Colors.blueAccent),
                   label: "Resources",
                 ),
               ],
@@ -181,7 +181,7 @@ class PrototypeState extends State<Prototype> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Talent Funding'),
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.blueAccent,
         ),
         body: ConstrainedBox(
           constraints: const BoxConstraints.expand(),
