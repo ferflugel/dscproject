@@ -1,8 +1,10 @@
+
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 // This is the class that will define the HomePage, Samira
 // Just displaying the projects
+
 class HomePage extends StatefulWidget {
   final GoogleSignInAccount? user;
 
@@ -54,6 +56,19 @@ class HomePageState extends State<HomePage> {
                           child: Text('Search',
                               style:
                                   TextStyle(color: Colors.amber, fontSize: 18)),
+                          shape: RoundedRectangleBorder())),
+                  ColoredBox(
+                      color: Colors.blueAccent,
+                      child: RawMaterialButton(
+                          onPressed: () {
+                              final isValid = _key.currentState!.validate();
+                              if (isValid) {
+                                _AddProject();
+                              }
+                          },
+                          child: Text('Add a project',
+                              style:
+                              TextStyle(color: Colors.amber, fontSize: 18)),
                           shape: RoundedRectangleBorder()))
                 ],
               )),
@@ -63,13 +78,13 @@ class HomePageState extends State<HomePage> {
   }
 }
 
+
 class Projects extends StatefulWidget {
   @override
-  _ProjectsState createState() => _ProjectsState();
+  _AddProject createState() => _AddProject();
 }
 
-//Project form that company can fill in
-class _ProjectsState extends State<Projects> {
+class _AddProject extends State<Projects> {
   TextEditingController _projectname = TextEditingController();
   TextEditingController _company = TextEditingController();
   TextEditingController _position = TextEditingController();
@@ -80,6 +95,7 @@ class _ProjectsState extends State<Projects> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
@@ -147,8 +163,7 @@ class _ProjectsState extends State<Projects> {
                       child: RawMaterialButton(
                           onPressed: () {},
                           child: Text('Create',
-                              style:
-                              TextStyle(color: Colors.amber, fontSize: 18)),
+                              style: TextStyle(color: Colors.amber, fontSize: 18)),
                           shape: RoundedRectangleBorder()))
                 ],
               )),
