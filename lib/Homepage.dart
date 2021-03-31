@@ -68,6 +68,7 @@ class Projects extends StatefulWidget {
   _ProjectsState createState() => _ProjectsState();
 }
 
+//Project form that company can fill in
 class _ProjectsState extends State<Projects> {
   TextEditingController _projectname = TextEditingController();
   TextEditingController _company = TextEditingController();
@@ -105,19 +106,6 @@ class _ProjectsState extends State<Projects> {
                     decoration:InputDecoration(
                         prefixIcon: Icon(Icons.account_balance_outlined),
                         hintText: "Company"),
-                    // validator: (String value){
-                    //   if(value.isEmpty)
-                    //   {
-                    //     return "Please enter  email";
-                    //   }
-                    //   if(!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value))
-                    //   {
-                    //     return "Please enter valid email";
-                    //   }
-                    //   return null;
-                    // },
-                    // onSaved: (String email){
-                    // },
                   ),
                 ),
                 Padding(
@@ -128,19 +116,6 @@ class _ProjectsState extends State<Projects> {
                     decoration:InputDecoration(
                         prefixIcon: Icon(Icons.account_circle_rounded),
                         hintText: "Position"),
-                    // validator: (String value){
-                    //   if(value.isEmpty)
-                    //   {
-                    //     return "Please enter  phone";
-                    //   }
-                    //   if(value.length < 9)
-                    //   {
-                    //     return "Please enter valid phone";
-                    //   }
-                    //   return null;
-                    // },
-                    // onSaved: (String phone){
-                    // },
                   ),
                 ),
                 Padding(
