@@ -64,8 +64,8 @@ class ProfilePageState extends State<ProfilePage> {
                     radius: 65, backgroundImage: AssetImage("cat.png")),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white,
-                  border: Border.all(color: Colors.blue),
+                  color: Colors.amber,
+                  border: Border.all(color: Colors.blueAccent),
                 ),
                 height: 130,
                 width: 130,
@@ -91,8 +91,8 @@ class ProfilePageState extends State<ProfilePage> {
                       style: TextStyle(fontSize: 12)),
                 ]),
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(color: Colors.blue),
+                  color: Colors.amber,
+                  border: Border.all(color: Colors.blueAccent),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 padding: EdgeInsets.all(10),
@@ -111,8 +111,8 @@ class ProfilePageState extends State<ProfilePage> {
               Text(aboutme, style: TextStyle(fontSize: 12)),
             ]),
             decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(color: Colors.blue),
+              color: Colors.amber,
+              border: Border.all(color: Colors.blueAccent),
               borderRadius: BorderRadius.circular(10),
             ),
             padding: EdgeInsets.all(20),
@@ -128,8 +128,8 @@ class ProfilePageState extends State<ProfilePage> {
               Text(pastworks, style: TextStyle(fontSize: 12)),
             ]),
             decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(color: Colors.blue),
+              color: Colors.amber,
+              border: Border.all(color: Colors.blueAccent),
               borderRadius: BorderRadius.circular(10),
             ),
             padding: EdgeInsets.all(20),
@@ -144,8 +144,8 @@ class ProfilePageState extends State<ProfilePage> {
               Text(user.email, style: TextStyle(fontSize: 14))
             ]),
             decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(color: Colors.blue),
+              color: Colors.amber,
+              border: Border.all(color: Colors.blueAccent),
               borderRadius: BorderRadius.circular(10),
             ),
             padding: EdgeInsets.all(20),
