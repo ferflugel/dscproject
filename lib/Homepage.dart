@@ -27,7 +27,11 @@ class HomePageState extends State<HomePage> {
     //return Text('Homepage, list all the projects from the database. Please
     // include a search function here', style: TextStyle(fontSize: 20));
     return Scaffold(
-     body: Center(
+      appBar: AppBar(
+        title: Text('Talent Funding'),
+        backgroundColor: Colors.amber,
+      ),
+      body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -47,7 +51,7 @@ class HomePageState extends State<HomePage> {
                       color: Colors.blueAccent,
                       child: RawMaterialButton(
                           onPressed: () {},
-                          child: Text('Add project',
+                          child: Text('Search',
                               style:
                                   TextStyle(color: Colors.amber, fontSize: 18)),
                           shape: RoundedRectangleBorder()))
@@ -65,31 +69,119 @@ class Projects extends StatefulWidget {
 }
 
 class _ProjectsState extends State<Projects> {
-  List<String> category = ['Project', 'Organization', 'Appreciation'];
-  int selectedIndex = 0;
+  TextEditingController _projectname = TextEditingController();
+  TextEditingController _company = TextEditingController();
+  TextEditingController _position = TextEditingController();
+  TextEditingController _description = TextEditingController();
+  TextEditingController _requirement = TextEditingController();
+
+  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        height: 25,
-        child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: category.length,
-            itemBuilder: (context, index) => buildCategory(index)));
-  }
-
-  Widget buildCategory(int index) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-      child: Column(children: <Widget>[
-        Text(
-          category[index],
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+    return Scaffold(
+      body: Center(
+        child: SingleChildScrollView(
+          child: Form(
+            key: _formkey,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom:15,left: 10,right: 10),
+                  child: TextFormField(
+                    controller: _projectname,
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.wallet_travel_rounded),
+                        hintText: "Project Name"),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 15,left: 10,right: 10),
+                  child: TextFormField(
+                    controller: _company,
+                    keyboardType: TextInputType.text,
+                    decoration:InputDecoration(
+                        prefixIcon: Icon(Icons.account_balance_outlined),
+                        hintText: "Company"),
+                    // validator: (String value){
+                    //   if(value.isEmpty)
+                    //   {
+                    //     return "Please enter  email";
+                    //   }
+                    //   if(!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value))
+                    //   {
+                    //     return "Please enter valid email";
+                    //   }
+                    //   return null;
+                    // },
+                    // onSaved: (String email){
+                    // },
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 15,left: 10,right: 10),
+                  child: TextFormField(
+                    controller: _position,
+                    keyboardType: TextInputType.text,
+                    decoration:InputDecoration(
+                        prefixIcon: Icon(Icons.account_circle_rounded),
+                        hintText: "Position"),
+                    // validator: (String value){
+                    //   if(value.isEmpty)
+                    //   {
+                    //     return "Please enter  phone";
+                    //   }
+                    //   if(value.length < 9)
+                    //   {
+                    //     return "Please enter valid phone";
+                    //   }
+                    //   return null;
+                    // },
+                    // onSaved: (String phone){
+                    // },
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 15,left: 10,right: 10),
+                  child: TextFormField(
+                    controller: _description,
+                    keyboardType: TextInputType.text,
+                    decoration:InputDecoration(
+                        prefixIcon: Icon(Icons.category),
+                        hintText: "Description"),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 15,left: 10,right: 10),
+                  child: TextFormField(
+                    controller: _requirement,
+                    keyboardType: TextInputType.text,
+                    decoration:InputDecoration(
+                        prefixIcon: Icon(Icons.assignment_turned_in),
+                        hintText: "Requirement"),
+                  ),
+                ),
+          Form(
+              key: _formkey,
+              child: Column(
+                children: [
+                  ColoredBox(
+                      color: Colors.blueAccent,
+                      child: RawMaterialButton(
+                          onPressed: () {},
+                          child: Text('Create',
+                              style:
+                              TextStyle(color: Colors.amber, fontSize: 18)),
+                          shape: RoundedRectangleBorder()))
+                ],
+              )),
+              ],
+            ),
+          ),
         ),
-        Container(
-          height: 7,
-        )
-      ]),
+      ),
     );
   }
 }
